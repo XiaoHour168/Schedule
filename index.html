@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My 48-Week Learning Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f4ee;--card:#fffdf9;--ink:#2b2720;--muted:#625c50;--line:#e6dfd0;--acc:#2f5d50;--wf:#dcefdd;--wi:#1f6b3a;--zf:#dbe9fb;--zi:#1d56a0;--nf:#e6dffa;--ni:#4630a6;--pf:#f1e8d3;--pi:#7a5a1c;--xf:#eee8dc;--m1:#dcefdd;--m2:#dbe9fb;--m3:#e6dffa;--m4:#f6e1d3;--m5:#fff1cf;--m6:#e9e3d4;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171510;--card:#211e17;--ink:#f0ebdf;--muted:#bdb6a6;--line:#3a352a;--acc:#8fcab6;--wf:#223a28;--wi:#9fe0b0;--zf:#1f3350;--zi:#a9cdf7;--nf:#2f2850;--ni:#c5b9ff;--pf:#3c3320;--pi:#e6c98a;--xf:#2c2820;--m1:#223a28;--m2:#1f3350;--m3:#2f2850;--m4:#4a2f22;--m5:#4a4020;--m6:#35311f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171510;--card:#211e17;--ink:#f0ebdf;--muted:#bdb6a6;--line:#3a352a;--acc:#8fcab6;--wf:#223a28;--wi:#9fe0b0;--zf:#1f3350;--zi:#a9cdf7;--nf:#2f2850;--ni:#c5b9ff;--pf:#3c3320;--pi:#e6c98a;--xf:#2c2820;--m1:#223a28;--m2:#1f3350;--m3:#2f2850;--m4:#4a2f22;--m5:#4a4020;--m6:#35311f;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif}
+h1,h2,h3,.rt b{font-family:'Bricolage Grotesque','Figtree',system-ui,sans-serif}
+a:focus-visible,summary:focus-visible,.btn:focus-visible,.row input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:28px 18px 56px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}
+h1{margin:0;font-size:clamp(28px,5.4vw,46px);line-height:1.05;letter-spacing:-.5px}
+.sub{margin:10px 0 0;color:var(--muted);font-size:15.5px;max-width:52ch}
+.ring{position:relative;width:116px;height:116px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:9}
+.rb{stroke:var(--line)}
+.rf{stroke:var(--acc);stroke-linecap:round;stroke-dasharray:264;stroke-dashoffset:264;transition:stroke-dashoffset .5s}
+.rt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.rt b{font-size:26px;line-height:1}
+.rt span{font-size:11.5px;color:var(--muted);margin-top:3px;max-width:78px;line-height:1.2}
+.sync{font-size:13px;color:var(--muted);margin:0 0 12px}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px;margin-bottom:12px}
+.hh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:14px}
+.hh h2{margin:0;font-size:25px;letter-spacing:-.3px}
+.hh p{margin:2px 0 0;color:var(--muted);font-size:14.5px}
+.btn{font:inherit;font-weight:700;border:0;border-radius:99px;background:var(--acc);color:var(--card);min-height:46px;padding:0 24px;cursor:pointer}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tile{border-radius:18px;padding:13px 15px;color:var(--ink)}
+.tk{font-weight:700;font-size:13.5px}
+.tt{font-size:16px;font-weight:600;margin:4px 0 2px;line-height:1.35}
+.t-web{background:var(--wf)}.t-web .tk{color:var(--wi)}
+.t-zh{background:var(--zf)}.t-zh .tk{color:var(--zi)}
+.t-net{background:var(--nf)}.t-net .tk{color:var(--ni)}
+.t-prj{background:var(--pf)}.t-prj .tk{color:var(--pi)}
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 14px}
+.blk{border-radius:14px;padding:9px 12px;font-size:13px;background:var(--xf);color:var(--ink)}
+.blk b{display:block;font-size:13.5px}
+.b-web{background:var(--wf)}.b-zh{background:var(--zf)}.b-net{background:var(--nf)}.b-prj{background:var(--pf)}
+.sumbtn{cursor:pointer;font-weight:700;font-size:18px;min-height:48px;display:flex;align-items:center;color:var(--acc)}
+.subsd{margin:0 0 14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:2px 18px}
+.subsd[open] .sumbtn{margin-bottom:6px}
+.subgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;padding-bottom:14px}
+.subj{background:var(--bg);border-radius:16px;padding:12px 16px}
+.subj h3{margin:0 0 6px;font-size:18px}
+.subj ol{margin:0;padding-left:22px}
+.subj li{padding:4px 0;font-size:14.5px}
+.subj a{color:var(--acc);font-weight:600;display:inline-block;padding:4px 0}
+.when{display:block;color:var(--muted);font-size:12.5px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:0 0 12px;font-size:13.5px;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 17px;border-radius:99px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;background:var(--card);border:1px solid var(--line)}
+nav a:hover{border-color:var(--acc)}
+.part{margin:46px 0 4px;font-size:30px;letter-spacing:-.5px}
+.month{margin-top:30px}
+.mh{border-radius:22px;padding:16px 22px;margin-bottom:12px}
+.mh h2{margin:0;font-size:25px;letter-spacing:-.3px}
+.mh p{margin:3px 0 0;color:var(--ink);opacity:.75;font-size:14.5px}
+.week{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:2px 14px 10px;margin-bottom:10px}
+.wh{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;list-style:none;cursor:pointer;min-height:58px}
+.wh::-webkit-details-marker{display:none}
+.wh h3{margin:0;font-size:17.5px;flex:1 1 240px;letter-spacing:-.2px}
+.wh::after{content:"\25be";margin-left:auto;font-size:18px;color:var(--muted);transition:transform .2s}
+.week:not([open]) .wh::after{transform:rotate(-90deg)}
+.cnt{font-size:13px;font-weight:600;color:var(--muted)}
+.pri{border-radius:99px;padding:2px 11px;font-size:12.5px;font-weight:700}
+.p-E{background:var(--pf);color:var(--pi)}.p-I{background:var(--m5);color:var(--ink)}.p-O{background:var(--xf);color:var(--muted)}
+.ms{background:var(--acc);color:var(--card);border-radius:99px;padding:2px 11px;font-size:12.5px;font-weight:700}
+.net{display:inline-block;margin:0 0 8px;color:var(--ni);background:var(--nf);border-radius:10px;padding:3px 11px;font-size:13px;font-weight:600}
+.hd,.row{display:grid;grid-template-columns:30px 48px repeat(3,minmax(0,1fr));gap:6px 8px}
+.week.z .hd,.week.z .row{grid-template-columns:30px 48px repeat(4,minmax(0,1fr))}
+.hd{padding:2px 0 4px;font-size:13px;font-weight:700}
+.hd span{padding:0 4px}
+.h-web{color:var(--wi)}.h-zh{color:var(--zi)}.h-net{color:var(--ni)}.h-prj{color:var(--pi)}
+.row{padding:4px 0;cursor:pointer;align-items:stretch}
+.row>span{border-radius:12px;padding:7px 10px;font-size:14.5px;line-height:1.4;overflow-wrap:anywhere}
+.row:hover .day{background:var(--line)}
+.sh{margin:24px 0 10px;font-size:21px;letter-spacing:-.2px}
+.blk.now{outline:2px solid var(--acc);outline-offset:-2px}
+.blk.now::after{content:"Now";float:right;font-size:11.5px;font-weight:700;color:var(--acc)}
+.day{display:flex;align-items:center;justify-content:center;background:var(--xf);font-weight:700;font-size:13.5px;padding:0!important}
+.web,.zh,.nw,.night{background:var(--bg)}
+.web{border-left:4px solid var(--wi)}.zh{border-left:4px solid var(--zi)}.nw{border-left:4px solid var(--ni)}.night{border-left:4px solid var(--pi)}
+.wf3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:0 0 12px}
+.wfc{border-radius:14px;padding:10px 12px;color:var(--ink);display:flex;flex-direction:column;gap:4px}
+.wfc b{font-size:12.5px}
+.wfc.t-web b{color:var(--wi)}.wfc.t-zh b{color:var(--zi)}.wfc.t-net b{color:var(--ni)}
+.wfc span{font-size:14.5px;font-weight:600;line-height:1.3}
+.wfc select{font:inherit;font-size:13.5px;min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:0 10px;width:100%;margin-top:4px}
+.row input{appearance:none;-webkit-appearance:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--muted);margin:auto 0;cursor:pointer;display:grid;place-content:center;background:transparent}
+.row input:checked{background:var(--acc);border-color:var(--acc)}
+.row input:checked::after{content:"\2713";color:var(--card);font-size:15px;font-weight:700;line-height:1}
+.row:has(input:checked)>span:not(.day){opacity:.5}
+.web::before,.zh::before,.nw::before,.night::before{display:none;font-weight:700;font-size:12.5px}
+.web::before{content:"Web dev, 1 PM: ";color:var(--wi)}
+.zh::before{content:"Chinese, 6 PM: ";color:var(--zi)}
+.nw::before{content:"Networking, 8 PM: ";color:var(--ni)}
+.night::before{content:"Project, 8:40 PM: ";color:var(--pi)}
+.lk{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.lk a{display:inline-flex;align-items:center;gap:5px;min-height:30px;padding:0 11px 0 9px;border-radius:99px;font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);transition:border-color .15s}
+.lk a svg{width:12px;height:12px;flex:none}
+.lk a:hover{border-color:currentColor}
+.t-web .lk a,.web .lk a{color:var(--wi)}.t-zh .lk a,.zh .lk a{color:var(--zi)}.t-net .lk a,.nw .lk a{color:var(--ni)}
+.dash{margin:0 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13.5px;font-weight:700}
+.mp{height:6px;border-radius:99px;background:var(--card);margin-top:10px;overflow:hidden}
+.mp i{display:block;height:100%;width:0;background:var(--acc);border-radius:99px;transition:width .4s}
+.mc{display:block;font-size:12.5px;font-weight:700;margin-top:6px;color:var(--ink);opacity:.8}
+.dh{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.dh h2{margin:0;font-size:25px;letter-spacing:-.3px}
+.dh p{margin:0;color:var(--muted);font-size:14.5px}
+.cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.sc{border-radius:20px;padding:14px 16px;color:var(--ink)}
+.sc h3{margin:0 0 8px;font-size:19px}
+.pb{height:10px;background:var(--card);border-radius:99px;overflow:hidden;margin-bottom:6px}
+.pb i{display:block;height:100%;border-radius:99px}
+.t-web .pb i{background:var(--wi)}.t-zh .pb i{background:var(--zi)}.t-net .pb i{background:var(--ni)}
+.sc p{margin:0 0 8px;font-size:13.5px}
+.cw{background:var(--card);border-radius:14px;padding:10px 12px;margin:8px 0;font-size:14.5px;font-weight:600}
+.cw b{display:block;font-size:12.5px;color:var(--muted);font-weight:700}
+.sc select,.nf select,.nf input,#nq{font:inherit;font-size:14px;min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:0 10px;width:100%}
+.cw select{margin-top:6px}
+.sc summary{cursor:pointer;font-weight:700;font-size:14px;min-height:44px;display:flex;align-items:center}
+.wls{max-height:360px;overflow:auto}
+.wl{display:grid;grid-template-columns:1fr 140px;gap:6px 8px;align-items:center;padding:4px 0;font-size:13.5px}
+.nt{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:2px 18px 14px;margin:0 0 14px}
+.nt:not([open]){padding-bottom:2px}
+.nf{display:grid;grid-template-columns:1fr 110px;gap:8px;margin-bottom:8px}
+.nt textarea{font:inherit;font-size:14.5px;min-height:90px;width:100%;border-radius:12px;border:1px solid var(--line);padding:10px;background:var(--bg);color:var(--ink);margin-bottom:8px}
+.nt .btn{margin-bottom:12px}
+.note{border-top:1px solid var(--line);padding:8px 0;font-size:14.5px}
+.note small{color:var(--muted);display:block}
+.lnk{font:inherit;font-size:13px;font-weight:700;color:var(--acc);background:none;border:0;padding:8px 0;cursor:pointer;min-height:36px}
+.empty{color:var(--muted);font-size:14px;margin:8px 0 0}
+footer{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:700px){
+.top{align-items:flex-start}.ring{width:92px;height:92px}.rt b{font-size:21px}.rt span{font-size:10px;max-width:64px}
+.hd{display:none}
+.row,.week.z .row{grid-template-columns:30px 1fr}
+.row>span{grid-column:2}
+.web::before,.zh::before,.nw::before,.night::before{display:block}
+.lk a{min-height:40px}
+.strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+.day{justify-content:flex-start;padding:0 4px!important;background:transparent}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div><h1>My 48-Week Learning Plan</h1><p class="sub">Web development, Mandarin and networking together. Tick a day when its study is done, and confirm each week yourself.</p><div class="sync" id="sync"></div></div>
+<div class="ring"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="rb" cx="50" cy="50" r="42"/><circle class="rf" id="rfill" cx="50" cy="50" r="42"/></svg><div class="rt"><b id="ppct">0%</b><span id="ptxt">0 of 336 days done</span></div></div></header>
+<div id="dhead"></div>
+<div id="hero"></div>
+<div class="dash" id="dash"></div>
+<h2 class="sh">Daily schedule</h2>
+<div class="strip">
+<div class="blk b-web"><b>1:00–3:00 PM</b>Web dev</div>
+<div class="blk"><b>3:00–6:00 PM</b>Free time</div>
+<div class="blk b-zh"><b>6:00–6:40 PM</b>Chinese</div>
+<div class="blk"><b>6:40–8:00 PM</b>Free time and dinner</div>
+<div class="blk b-net"><b>8:00–8:30 PM</b>Networking</div>
+<div class="blk"><b>8:30–8:40 PM</b>Break</div>
+<div class="blk b-prj"><b>8:40–10:40 PM</b>Project and practice</div>
+<div class="blk"><b>10:40–11:00 PM</b>Review, plan tomorrow</div>
+</div>
+<div id="notes"></div>
+<div id="subs"></div>
+<h2 class="sh">Your 48 weeks</h2>
+<div class="legend"><span class="pri p-E">Essential</span> do first <span class="pri p-I">Important</span> learn while applying for jobs <span class="pri p-O">Optional</span> learn when a job needs it</div>
+<nav id="nav"></nav>
+<main id="main"></main>
+<footer>Part 1 gets you job-ready. Part 2 builds full-stack depth. Repeat any week that isn’t solid yet, and start applying after week 24.</footer>
+</div>
+<script>
+var M=[["Month 1 · Foundations","Goal: a personal web page"],["Month 2 · Layout and Git","Goal: a responsive page live online"],["Month 3 · JavaScript","Goal: an interactive JavaScript app"],["Month 4 · Modern JS and APIs","Goal: an app that uses a real API"],["Month 5 · React","Goal: a multi-page React app"],["Month 6 · Full-stack and job-ready","Goal: a deployed full-stack project and a portfolio"],["Month 7 · Node.js and Express","Goal: your own REST API with login"],["Month 8 · SQL and PostgreSQL","Goal: a full-stack app with your own API and database"],["Month 9 · Testing and quality","Goal: a tested, accessible, fast app"],["Month 10 · Data structures and algorithms","Goal: solve easy problems and pass a mock interview"],["Month 11 · Docker and CI/CD","Goal: an app deployed with an automated pipeline"],["Month 12 · Capstone and career","Goal: a capstone project and job applications"]];
+var W=[
+"HTML basics~How the internet works (client, server, request, response)~Setup: VS Code, browser DevTools, first HTML file~“Hello world” page~Headings, paragraphs, text tags~Bio page~Links and images~Add photos and links to the bio page~Lists, div, span, comments~Hobby or recipe page~Page structure, folders and file names~Link 3 pages together~Review~Finish a 3-page mini site",
+"HTML forms, tables, semantic tags~IP addresses and ports~Forms: input, label, button~Contact form~Select, checkbox, radio, textarea~Sign-up form~Tables~Class timetable table~Semantic tags: header, nav, main, footer~Restructure your bio site~Accessibility basics: alt text, labels~Fix accessibility on your site~Review~Mini project: school club page",
+"CSS basics~DNS (how a domain name finds a server)~Adding CSS, selectors~Style the bio page colors~Colors, fonts, text~Add a Google Font~Box model: margin, padding, border~Spacing on cards~Backgrounds, borders, shadows~Card design~Display and position basics~Build a navbar~Review~Style the mini site",
+"CSS practice and first project~HTTP requests and responses~Hover, pseudo-classes, transitions~Button hover effects~Units: px, rem, %, vh~Convert a site to rem~CSS variables, organizing CSS~Color theme with variables~Study a simple real page layout~Rebuild that page~Debugging CSS with DevTools~Fix 5 layout bugs~Project~Personal portfolio v1 (HTML + CSS)",
+"Flexbox~HTTP status codes and headers~Flex container basics~Flexbox Froggy game~Justify, align, gap~Navbar with flex~Flex items: grow, shrink, wrap~Row of cards~Flex layout patterns~Hero section and footer~Practice~Rebuild 2 layouts~Review~Full page using flex",
+"Grid and responsive design~HTTPS and TLS basics~CSS Grid basics~Grid Garden game~Grid areas, auto-fit~Photo gallery~Media queries~Make the navbar mobile-friendly~Mobile-first design~Convert a page to mobile-first~Responsive images and typography~Polish responsiveness~Review~Responsive portfolio page",
+"Git and GitHub~The browser Network tab~Install Git: init, add, commit~Commit your old projects~Branches and merging~Practice branching~GitHub: push, pull, clone~Push all projects~README, .gitignore, commit messages~Write READMEs~Pull requests, merge conflicts~Practice a fake conflict~Review~Set up your GitHub profile",
+"Landing page project and deploy~Hosting and domains~Plan: wireframe a landing page~Sketch the design~Header and hero section~Code the hero~Features and testimonials sections~Code the sections~Footer, responsive fixes~Mobile polish~Deploy on GitHub Pages or Netlify~Go live~Review and feedback~Fix feedback: live site done",
+"JavaScript fundamentals~Cookies and sessions~Console, variables, data types~Console exercises~Operators and conditions~Grade calculator logic~Loops~FizzBuzz and patterns~Functions~Write 10 small functions~Scope, arrow functions~Refactor your functions~Review~Number guessing game",
+"Arrays and objects~Same-origin policy and CORS~Arrays and array methods~Array exercises~map, filter, reduce~Transform a data list~Objects, destructuring~Student object list~Arrays of objects~Filter and sort a product list~JSON~Parse and stringify practice~Review~Mini data-processing script",
+"DOM and events~What is an API? REST basics~Selecting elements~Change text and colors~Events: click, input~Counter app~Creating and removing elements~Add and remove list items~Forms and validation~Validated sign-up form~localStorage~Save data in the browser~Review~Notes app",
+"Project: to-do or quiz app~Review and short quiz~Plan features~Wireframe and feature list~Build the UI~HTML and CSS of the app~Add the logic~Add and complete tasks~Filters, localStorage~Save and filter tasks~Polish and responsive~Style and mobile fixes~Deploy and README~Publish: JS app done",
+"Modern JavaScript~JSON and REST~let/const, template literals, spread~Refactor to ES6+~Modules: import and export~Split a project into modules~Error handling: try/catch~Add error handling~Classes basics~Small class exercise~Array and object patterns~Practice set~Review~Refactor the to-do app",
+"Async JavaScript~Fetch and debugging in the Network tab~Callbacks, how async works~Timer exercises~Promises~Chain promises~async / await~Rewrite with async/await~fetch: GET~Fetch a public API~fetch: POST, headers~Send data to a test API~Review~Random user card app",
+"Weather app~Tokens, JWT, auth basics~API keys, reading API docs~Pick a weather API~Fetch and display data~Show a city’s weather~Loading and error states~Search box and spinner~Lists from API data~5-day forecast~Style and responsive~Polish~Review~Deploy the weather app",
+"API project~XSS and CSRF basics~Choose an API (movies, recipes)~Plan the app~Build the UI~Layout~Fetch and render a list~Show the data~Search, filter, detail view~Add features~Error states and polish~Handle edge cases~Deploy and README~Publish: API app done",
+"React basics~CDN and caching~Node, npm, Vite, first React app~Create the app~JSX and components~Split a page into components~Props~Reusable cards~Lists and keys~Render a list from an array~Events, conditional rendering~Toggle features~Review~Profile cards app",
+"State and hooks~Performance basics~useState~Counter and toggle~Forms in React~Controlled form~useEffect~Fetch data on load~Lifting state, custom hooks~Share state between components~Practice~Rebuild the to-do app in React~Review~React movie search",
+"TypeScript and Tailwind~Environment variables and secrets~TypeScript basics: types~Type exercises~Types for props and state~Convert components to TS~Tailwind basics~Style a component~Tailwind layout, responsive~Responsive page with Tailwind~Reusable Tailwind components~Button, card, input kit~Review~Restyle your app with Tailwind",
+"React Router project~Review and short quiz~React Router~Set up pages~Layouts, nested routes~Navbar and layout~Plan the project (blog or dashboard)~Wireframes~Build pages~Home and list pages~Detail pages and state~Detail page and search~Deploy on Vercel or Netlify~Publish: React app done",
+"Supabase: database and auth~Databases over the network~What is a database? SQL basics~Create tables in Supabase~Read data~Display data from the database~Insert, update, delete~CRUD interface~Auth: sign up and log in~Auth pages~Row-level security basics~Protect user data~Review~Notes app with login",
+"Full-stack project: build~Deployment and DNS~Plan features and database schema~Design the tables~Auth and layout~Login and app shell~Core feature 1~CRUD~Core feature 2~Search and filter~Validation~Add input validation~Review~Test everything",
+"Finish and deploy~Domain and HTTPS setup~Bug fixing~Work through your bug list~Loading and error states, UX polish~Polish~Responsive and accessibility check~Mobile check~Deploy to Vercel or Netlify~Go live with env variables~Custom domain and HTTPS (optional)~Connect the domain~Write the README~Screenshots and demo",
+"Portfolio and job search~Interview prep (HTTP, DNS, CORS questions)~Portfolio site structure~Build the portfolio~Add your 3 to 4 best projects~Write project case studies~CV and LinkedIn~Write your CV~GitHub profile polish~Pin repos, fix READMEs~Practice interview questions: HTML, CSS, JS, React~Mock interview~Start applying~Apply to 5 jobs or internships",
+"Node.js basics~How a server listens: sockets and ports~What Node is, install, run scripts~Node REPL and script exercises~Modules, npm, package.json~Create a small npm package~File system and path~Read and write files~Node http module~Build a plain HTTP server~Environment variables, dotenv~Config for your server~Review~CLI tool: to-do list in the terminal",
+"Express routing and middleware~REST API design~Install Express, first route~Hello API~Routes, params, query strings~CRUD routes with fake data~Middleware, express.json~Add logging middleware~Error handling middleware~Central error handler~Router modules, project structure~Split routes into files~Review~Tasks API (in-memory)",
+"Authentication: JWT and passwords~Auth security: cookie flags and OAuth idea~Hashing and bcrypt~Hash and compare passwords~Register route~Sign-up endpoint~Login and JWT~Issue tokens~Auth middleware, protected routes~Protect your API~Refresh tokens, logout idea~Token refresh flow~Review~Auth flow with Postman",
+"Project: REST API with auth~API docs and testing tools~Plan resources and routes~Design endpoints~Models and validation~Add validation with zod~Auth and user routes~Users and login~Core resource CRUD~Notes or tasks CRUD~Docs: README and examples~Document every endpoint~Deploy the API~Publish: REST API done",
+"SQL basics~Database connections over the network~Tables, rows, data types~Create a database and tables~SELECT, WHERE, ORDER BY~Query practice~INSERT, UPDATE, DELETE~Modify data~Aggregates, GROUP BY~Reports on sample data~Constraints, primary keys~Add constraints~Review~SQL practice set",
+"Relations, joins and indexes~Pooling and latency~One-to-many, many-to-many~Design a blog schema~Foreign keys~Link tables~JOINs~Query across tables~Indexes, EXPLAIN~Speed up a slow query~Transactions~Transfer example~Review~Full schema and seed data",
+"Express with PostgreSQL~Environment and secrets in production~PostgreSQL install, pg client~Connect Node to Postgres~Parameterized queries~Safe queries~Prisma setup (ORM)~Schema with Prisma~CRUD with Prisma~Replace in-memory data~Migrations~Change schema safely~Review~API with a real database",
+"Project: full-stack app with your own API~CORS and cookies in full-stack apps~Plan features and schema~Design tables and routes~Backend: auth and core API~Build the API~React front end: pages~Connect React to the API~Forms, validation, errors~Handle errors on both sides~Polish and responsive~UX polish~Deploy front end and back end~Publish: full-stack app done",
+"Unit testing with Vitest~Mocking HTTP~Why test, test structure~First test~Assertions, test-driven basics~Test utility functions~Mocks and spies~Mock a function~Testing async code~Test fetch calls~Coverage~Reach 70% on a module~Review~Tests for your JS app",
+"React Testing Library~Rate limiting and throttling~Render and query components~Test a button~User events~Test a form~Testing hooks and state~Test a counter and to-do~Testing API calls~Mock API data~Testing routes~Test navigation~Review~Tests for your React app",
+"End-to-end tests with Playwright~Browser DevTools in depth~Install Playwright~First e2e test~Selectors and actions~Test the login flow~Assertions and waits~Test the CRUD flow~Test reports, screenshots~Add reports~Run tests in CI (idea)~Script all tests~Review~E2E suite for your app",
+"Accessibility and performance audit~HTTP/2, compression and caching~Accessibility basics: WCAG, ARIA~Audit with Lighthouse~Keyboard navigation, focus~Fix keyboard issues~Color contrast, screen readers~Fix contrast and labels~Performance: images, bundle size~Optimize images~Code splitting, lazy loading~Split bundles~Review~Re-run audits: aim for 90+",
+"Big O, arrays and strings~WebSockets~Big O notation~Analyze 5 functions~Arrays: two pointers~3 easy problems~Sliding window~3 problems~String problems~3 problems~Practice set~4 mixed problems~Review~Redo missed problems",
+"Hash maps, stacks and queues~HTTP/2 and HTTP/3~Hash maps and sets~Two-sum style problems~Frequency counting~3 problems~Stacks~Valid parentheses and more~Queues~Queue problems~Practice set~4 mixed problems~Review~Redo missed problems",
+"Recursion, linked lists and trees~Real-time: SSE and long polling~Recursion~Factorial, Fibonacci, flatten~Linked lists~Reverse a list~Binary trees~Tree traversals~Binary search trees~Insert and search~Practice set~4 mixed problems~Review~Redo missed problems",
+"Sorting, searching and mock interviews~Review: advanced networking~Binary search~3 problems~Sorting: merge and quick (idea)~Sort exercises~Graphs and BFS (intro)~Grid problems~Dynamic programming (intro)~2 easy problems~Mock coding interview~Timed 45-minute round~Review~List your weak topics",
+"Docker basics~Docker networking~What containers are, install Docker~Run a container~Dockerfile~Containerize your Node API~Images, layers, .dockerignore~Make a smaller image~Volumes~Persist data~Environment variables in containers~Config through env~Review~Run the API in Docker",
+"Docker Compose: multi-service apps~Reverse proxy with Nginx~docker-compose basics~API and database in compose~Services, networks, volumes~Add the front end~Healthchecks, dependencies~Fix start order~Nginx as a static server~Serve the React build~Nginx reverse proxy~Route /api to the backend~Review~Full stack in one compose file",
+"CI/CD with GitHub Actions~Load balancing basics~What CI/CD is, workflow files~First workflow~Run tests on every push~Add a test job~Lint and build jobs~Add lint and build~Secrets in Actions~Use secrets safely~Deploy on merge~Auto-deploy the front end~Review~Green pipeline badge in the README",
+"Cloud deploy: Render, Railway or AWS basics~Firewalls, SSH and VPN basics~Choose a host, create an account~Deploy the API~Managed PostgreSQL~Hosted database~Environment variables in the cloud~Connect the API to the database~Domains and HTTPS on the host~Custom domain~Logs and monitoring~Add error logging~Review~Full app live in the cloud",
+"Capstone: plan and build, part 1~Security headers~Pick an idea, write specs~User stories and wireframes~Database schema and API design~Tables and endpoints~Backend: auth and core routes~Build the API~Backend: remaining routes, validation~Finish the API~Tests for the API~Write API tests~Review~Deploy the API early",
+"Capstone: build, part 2~HTTPS hardening~React app structure~Pages and routing~Forms, state, API calls~Connect to the API~Core UI features~Build the main screens~Error and empty states~Polish states~Component tests~Test key components~Review~Demo to a friend",
+"Capstone: finish, test, deploy~Monitoring and logging~Bug fixing~Clean up the bug list~E2E test of the main flow~Playwright test~Performance and accessibility pass~Lighthouse audit~CI/CD pipeline~Auto test and deploy~Docs: README, screenshots, demo video~Record the demo~Review~Final production check",
+"Portfolio, CV and job search~System design basics for interviews~Refresh the portfolio with your capstone~Update the portfolio~Case studies: problem, build, result~Write 2 case studies~CV and LinkedIn update~Polish your CV~Mock interview: behavioral~Practice STAR stories~Mock interview: technical~Timed technical round~Apply and network~Apply to 10 jobs and message 5 people"
+];
+var N=[
+"What is a network?~Client and server~Request and response~What the browser does~Internet, ISP and the web~Quick quiz",
+"What is an IP address?~IPv4 vs IPv6~Public vs private IP~Ports and services~ping and ipconfig~Quick quiz",
+"What DNS does~Domain, subdomain, TLD~DNS records: A, CNAME~DNS lookup steps~nslookup practice~Quick quiz",
+"HTTP basics~Methods: GET, POST~Request headers~Response and body~URLs: path and query~Quick quiz",
+"2xx success codes~3xx redirects~4xx client errors~5xx server errors~Common headers~Quick quiz",
+"Why HTTP isn’t safe~Encryption basics~Certificates~TLS handshake (simple)~Check a site’s certificate~Quick quiz",
+"Open the Network tab~Read a request~Timing and waterfall~Find a failed request~Check response data~Quick quiz",
+"What is hosting?~Static vs dynamic hosting~Buy and manage a domain~Point a domain to a site~CDNs in simple terms~Quick quiz",
+"What is a cookie?~Cookie attributes~Sessions~localStorage vs cookies~View cookies in DevTools~Quick quiz",
+"What is an origin?~Same-origin policy~What CORS is~Reading CORS errors~Fix a CORS error~Quick quiz",
+"What is an API?~REST ideas~Endpoints and methods~Request and response bodies~Try an API in the browser~Quick quiz",
+"Review: internet and IP~Review: DNS and HTTP~Review: HTTPS~Review: cookies and CORS~Review: APIs~Full quiz",
+"JSON syntax~JSON vs XML~REST resources~CRUD and HTTP methods~Status codes in APIs~Quick quiz",
+"Watch fetch in the Network tab~Read request payloads~Read response data~Common fetch errors~Debug a failing request~Quick quiz",
+"Authentication vs authorization~API keys~Tokens~What is a JWT?~Where to store tokens~Quick quiz",
+"Web attacks overview~What is XSS?~Prevent XSS~What is CSRF?~Prevent CSRF~Quick quiz",
+"What is a CDN?~Browser cache~Cache headers~Cache busting~Check cache in DevTools~Quick quiz",
+"Why sites are slow~Image size and formats~Minify and compress~Lazy loading~Lighthouse report~Quick quiz",
+"Why secrets matter~Environment variables~.env files~Never commit secrets~Secrets on Vercel or Netlify~Quick quiz",
+"Review: caching and CDN~Review: performance~Review: secrets~Review: auth and tokens~Review: attacks~Full quiz",
+"Client, server, database~Database connection basics~Queries over the network~Auth tokens with Supabase~Row-level security idea~Quick quiz",
+"Deployment pipeline basics~Build and hosting~DNS for your app~Preview vs production~Logs and errors~Quick quiz",
+"Domain checklist~DNS records for your site~HTTPS certificates~Redirect www and non-www~Test your live site~Quick quiz",
+"HTTP questions~DNS questions~CORS and cookies questions~API and auth questions~HTTPS and security questions~Mock Q and A",
+"What is a socket?~Ports and listening~Localhost and 127.0.0.1~TCP in simple terms~A request in a raw server~Quick quiz",
+"Resource naming~HTTP methods in REST~Status codes for APIs~Pagination and filtering~Versioning APIs~Quick quiz",
+"Cookie flags: HttpOnly, Secure~SameSite cookies~What is OAuth?~Common auth mistakes~Token storage tradeoffs~Quick quiz",
+"Postman basics~curl basics~Reading API docs~Writing API docs~Test an API end to end~Quick quiz",
+"Client and database server~Connection strings~Ports: 5432 for PostgreSQL~Authentication to a database~Local vs remote database~Quick quiz",
+"What is connection pooling?~Latency and round trips~The N+1 query problem~Caching query results~Timeouts and retries~Quick quiz",
+"Secrets in the cloud~.env vs secret managers~Rotating credentials~SQL injection~Least privilege for database users~Quick quiz",
+"CORS in full-stack apps~Cookies across domains~Proxy in development~Dev vs prod URLs~Debug network errors~Quick quiz",
+"Mocking network requests~Fake servers with MSW~Test data~Flaky tests and timeouts~Reading test output~Quick quiz",
+"What is rate limiting?~429 Too Many Requests~Throttle vs debounce~Retry with backoff~Abuse protection basics~Quick quiz",
+"Network throttling in DevTools~Waterfall deep dive~Console and Sources tabs~Application tab: storage~Performance tab intro~Quick quiz",
+"HTTP/2 vs HTTP/1.1~Gzip and Brotli~Cache-Control revisited~Preload and prefetch~Core Web Vitals~Quick quiz",
+"Polling vs WebSockets~The WebSocket handshake~Open a WebSocket in the browser~A simple chat server idea~When not to use WebSockets~Quick quiz",
+"Multiplexing~Head-of-line blocking~QUIC in simple terms~Server push is retired~Check the protocol in DevTools~Quick quiz",
+"Server-sent events~Long polling~Pick the right real-time method~Reconnect strategies~Scaling real-time (idea)~Quick quiz",
+"Review: sockets and ports~Review: REST and rate limits~Review: HTTP/2 and HTTP/3~Review: WebSockets and SSE~Review: database networking~Full quiz",
+"Container ports~The bridge network~Exposing vs publishing ports~Container-to-container traffic~DNS inside Docker~Quick quiz",
+"What a reverse proxy does~Proxy pass~Header: X-Forwarded-For~Serving static files~Compression in Nginx~Quick quiz",
+"What a load balancer does~Round robin and health checks~Sticky sessions~Horizontal vs vertical scaling~CDN vs load balancer~Quick quiz",
+"What a firewall does~Open ports and security groups~SSH keys~What a VPN does~Zero-trust idea~Quick quiz",
+"Content-Security-Policy~HSTS~X-Frame-Options~Helmet.js for Express~Check headers online~Quick quiz",
+"TLS versions~Certificate renewal~Mixed content~Secure cookies in production~SSL Labs test~Quick quiz",
+"Logs: what to record~Error tracking tools~Uptime monitoring~Alerts~Reading a production error~Quick quiz",
+"Client, server, database diagram~Caching and CDN~Load balancer and scaling~Databases and queues (idea)~Explain a design out loud~Mock Q and A"
+];
+var D=["Mon","Tue","Wed","Thu","Fri","Sat"],done=new Set();
+try{done=new Set(JSON.parse(localStorage.getItem("wd-plan")||"[]"))}catch(e){}
+function row(id,d,a,n,b,z){return '<label class="row"><input type="checkbox" data-id="'+id+'"'+(done.has(id)?" checked":"")+'><span class="day">'+d+'</span><span class="web">'+a+'</span>'+(z?'<span class="zh">'+z+'</span>':'')+'<span class="nw">'+n+'</span><span class="night">'+b+'</span></label>'}
+var HD='<div class="hd"><span></span><span></span><span class="h-web">Web dev, 1 PM</span><span class="h-net">Networking, 8 PM</span><span class="h-prj">Project, 8:40 PM</span></div>';
+var HDZ=HD.replace('<span class="h-net">','<span class="h-zh">Chinese, 6 PM</span><span class="h-net">');
+var ZD=["Vocabulary","Pronunciation","Grammar","Characters and handwriting","Listening","Speaking and writing","Weekly review and mini-test"];
+var ZT=["Pinyin initials and finals","Four tones and neutral tone","Greetings, numbers, self-introduction","Basic characters and handwriting","Pronouns and family","Numbers, dates and time","Food, drinks and shopping","Countries, languages, occupations","Grammar: 是, 有, 在","Grammar: 不, 没, 吗, 呢","Adjectives and sentence structures","Measure words and particles","Daily routines","Hobbies and interests","Shopping and restaurants","Directions and transportation","Short conversations","Beginner reading passages","Listening comprehension","Writing short paragraphs","Vocabulary revision","Grammar revision","Speaking and listening assessment","Final assessment and next-level prep"];
+var ZR="HelloChinese|https://www.hellochinese.cc,Pleco dictionary|https://www.pleco.com,Chinese Grammar Wiki|https://resources.allsetlearning.com/chinese/grammar,Hanzi Writer|https://hanziwriter.org,Anki flashcards|https://apps.ankiweb.net,Yoyo Chinese|https://yoyochinese.com";
+var T={web:"HTML5 structure and text|HTML forms, tables and semantic tags|CSS3 basics and the box model|CSS typography, color and backgrounds|Flexbox|CSS Grid|Responsive web design|Git, GitHub and a portfolio page|Variables, data types and operators|Conditionals and loops|Functions|Arrays and objects|DOM manipulation|Events and forms|Asynchronous JavaScript|Fetch API and an API project|React components and props|State and hooks|Effects and data fetching|React Router|TypeScript basics|TypeScript with React|Tailwind CSS|Frontend project|Node.js basics|Express and routing|REST API design|Middleware and validation|Authentication: hashing and JWT|Authorization and sessions|Server-side programming patterns|Backend project|SQL basics|Database relationships and joins|CRUD with PostgreSQL|ORM and migrations|Connect frontend and backend|Full-stack features|Deployment|Full-stack project|Testing basics|Testing React and APIs|Debugging|Clean code and refactoring|Portfolio build|GitHub projects polish|Interview prep: coding|Interview prep: mock interviews",zh:"Pinyin initials|Pinyin finals|Four tones and neutral tone|Pronunciation practice and basic listening|Greetings and introductions|Numbers|Dates and time|Family and common expressions|Daily activities|Daily routines and verbs|Food and drinks|Ordering food|Places|Shopping|Asking questions|Basic sentence structures|Basic grammar: 是, 有, 在|Measure words|Negation: 不 and 没|Question structures|Daily conversations 1|Daily conversations 2|Listening exercises|Grammar and conversation review|Short paragraphs|Vocabulary expansion 1|Vocabulary expansion 2|Reading comprehension 1|Reading comprehension 2|Listening comprehension|Sentence writing|Reading and writing review|Everyday conversations|Describing experiences|Giving opinions|Speaking practice 1|Speaking practice 2|Short writing exercises 1|Short writing exercises 2|Practical Mandarin review|Vocabulary review|Grammar revision|Listening tests|Speaking assessment|Reading tests|HSK-style practice 1|HSK-style practice 2|Final review",net:"What is a computer network?|LAN, WAN and WLAN|Network topologies|Network devices|Routers and switches|Network cables|Basic configuration in Packet Tracer|Fundamentals lab and review|OSI model|TCP/IP model|Ethernet|MAC addresses and ARP|IPv4 basics|DNS|DHCP|TCP and UDP|IPv4 addressing|Subnet masks|Subnetting 1|Subnetting 2 and CIDR|VLSM practice|IPv6|Troubleshooting with ping and tracert|Addressing lab and review|Switching fundamentals|VLANs|Trunking|Inter-VLAN routing|Routing fundamentals|Static routing|Dynamic routing concepts|Switching and routing lab|DHCP configuration|DNS services|NAT|ACL fundamentals|Wireless networking|Network security fundamentals|Troubleshooting method|Services and security lab|Network design|Multi-router networks|VLAN configuration project|Troubleshooting scenarios|Network documentation|Final project: plan|Final project: build|Final project: test and present"};
+Object.keys(T).forEach(function(k){T[k]=T[k].split("|")});
+var SUBJ=[["web","Web development"],["zh","Mandarin Chinese"],["net","Computer networking"]];
+var SN={web:"Web development",zh:"Mandarin Chinese",net:"Computer networking"};
+var SL=[["","Not started"],["doing","In progress"],["rev","Needs revision"],["done","Completed"]];
+var lms={status:{},days:{},notes:[]},lref=null,lw=false,ld=false;
+try{var lc=JSON.parse(localStorage.getItem("wd-lms")||"null");if(lc)lms=Object.assign({status:{},days:{},notes:[]},lc)}catch(e){}
+function lsave(){try{localStorage.setItem("wd-lms",JSON.stringify(lms))}catch(e){}if(!lref)return;if(lw){ld=true;return}lw=true;ld=false;lref.set(lms).catch(function(){}).then(function(){lw=false;if(ld)lsave()})}
+function tk(d){d=d||new Date();return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+function streak(){var n=0,d=new Date();if(!lms.days[tk(d)])d.setDate(d.getDate()-1);while(lms.days[tk(d)]){n++;d.setDate(d.getDate()-1)}return n}
+var BT=[[780,900],[900,1080],[1080,1120],[1120,1200],[1200,1230],[1230,1240],[1240,1360],[1360,1380]];
+function markNow(){var d=new Date(),m=d.getHours()*60+d.getMinutes();document.querySelectorAll(".strip .blk").forEach(function(b,i){var t=BT[i];b.classList.toggle("now",!!t&&m>=t[0]&&m<t[1])})}
+function esc(t){return t.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function sel(id){var v=lms.status[id]||"";return '<select data-lk="'+id+'" aria-label="'+SN[id.replace(/\d+$/,"")]+' week '+id.replace(/^\D+/,"")+' status">'+SL.map(function(o){return '<option value="'+o[0]+'"'+(o[0]==v?" selected":"")+'>'+o[1]+'</option>'}).join("")+'</select>'}
+function wfocus(n){return '<div class="wf3">'+SUBJ.map(function(s){var k=s[0];return '<div class="wfc t-'+k+'"><b>'+s[1]+'</b><span>'+T[k][n-1]+'</span>'+sel(k+n)+'</div>'}).join("")+'</div>'}
+function renderDash(){
+var el=document.getElementById("dash");if(!el)return;
+var op=[];el.querySelectorAll(".sc details").forEach(function(x){op.push(x.open)});
+var x=nextId(),cw=x?x[0]:48,tot=0,cards="";
+SUBJ.forEach(function(s,i){
+var k=s[0],c={done:0,doing:0,rev:0},rows="";
+for(var w=1;w<=48;w++){var v=lms.status[k+w];if(c[v]!==undefined)c[v]++;rows+='<div class="wl"><span>Week '+w+': '+T[k][w-1]+'</span>'+sel(k+w)+'</div>'}
+tot+=c.done;
+cards+='<div class="sc t-'+k+'"><h3>'+s[1]+'</h3><div class="pb"><i style="width:'+(c.done/48*100)+'%"></i></div><p>'+c.done+' of 48 weeks completed, '+c.doing+' in progress, '+c.rev+' to revise</p><div class="cw"><b>This week, week '+cw+'</b>'+T[k][cw-1]+sel(k+cw)+'</div><details'+(op[i]?' open':'')+'><summary>All 48 weeks</summary><div class="wls">'+rows+'</div></details></div>'});
+var st=streak();
+var dh=document.getElementById("dhead");if(dh)dh.innerHTML='<div class="dh"><div><h2>Welcome back</h2><p>'+new Date().toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric"})+', week '+cw+' of 48</p></div><div class="chips"><span class="chip">Overall '+Math.round(tot/144*100)+'% completed</span><span class="chip">Study streak: '+st+' day'+(st==1?"":"s")+'</span></div></div>';el.innerHTML='<div class="cards3">'+cards+'</div>';document.querySelectorAll("select[data-lk]").forEach(function(s){s.value=lms.status[s.dataset.lk]||""})}
+function initNotes(){
+var el=document.getElementById("notes");if(!el)return;
+el.innerHTML='<details class="nt"><summary class="sumbtn">Notes and revision</summary><div class="nf"><select id="ns">'+SUBJ.map(function(s){return '<option value="'+s[0]+'">'+s[1]+'</option>'}).join("")+'</select><input id="nw" type="number" min="1" max="48" value="1" aria-label="Week"></div><textarea id="ntx" placeholder="Write a note, a mistake, or a topic to revise"></textarea><button class="btn" id="nsv" type="button">Save note</button><input id="nq" type="search" placeholder="Search notes" aria-label="Search notes"><div id="nl"></div></details>';
+document.getElementById("nsv").onclick=function(){var t=document.getElementById("ntx").value.trim();if(!t)return;var w=Math.min(48,Math.max(1,parseInt(document.getElementById("nw").value,10)||1));lms.notes.push({id:Date.now(),s:document.getElementById("ns").value,w:w,t:t,at:Date.now()});document.getElementById("ntx").value="";lsave();renderNoteList()};
+document.getElementById("nq").oninput=renderNoteList;
+document.getElementById("nl").addEventListener("click",function(e){var id=e.target.dataset&&e.target.dataset.del;if(!id)return;lms.notes=lms.notes.filter(function(n){return String(n.id)!==id});lsave();renderNoteList()});
+}
+function renderNoteList(){
+var el=document.getElementById("nl");if(!el)return;
+var q=document.getElementById("nq").value.toLowerCase();
+var h=lms.notes.filter(function(n){return !q||(n.t+" "+SN[n.s]+" week "+n.w).toLowerCase().indexOf(q)>-1}).sort(function(a,b){return b.at-a.at}).map(function(n){return '<div class="note"><small>'+SN[n.s]+', week '+n.w+', '+new Date(n.at).toLocaleDateString()+'</small>'+esc(n.t)+'<button class="lnk" data-del="'+n.id+'" type="button">Delete</button></div>'}).join("");
+el.innerHTML=h||'<p class="empty">No notes yet. Write what you learned or what you got wrong.</p>'}
+document.addEventListener("change",function(e){var t=e.target;if(t.dataset&&t.dataset.lk){lms.status[t.dataset.lk]=t.value;lsave();renderDash()}});
+var P="EEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIOIOOOOOOOOIIIE";var PL={E:"Essential",I:"Important",O:"Optional"};
+var SC={m:"developer.mozilla.org",g:"docs.github.com",j:"javascript.info",r:"react.dev",s:"supabase.com",n:"nodejs.org",e:"expressjs.com",p:"postgresqltutorial.com",z:"prisma.io",v:"vitest.dev",t:"testing-library.com",y:"playwright.dev",w:"web.dev",d:"docs.docker.com"};
+var WSITE="mmmmmmgmjjjjjjjmrr-rs---ne--ppz-vtyw----ddg-----";
+var IR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a1 1 0 0 1 1-1h6v15H5a1 1 0 0 0-1 1V5zM20 5a1 1 0 0 0-1-1h-6v15h6a1 1 0 0 1 1 1V5z"/></svg>',IW='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>';
+function ll(q,s,l){if(/^(Review|Practice|Quick quiz|Full quiz|Mock|Project|Mini|Weekly)/.test(l))return"";return '<span class="lk"><a href="https://www.google.com/search?q='+encodeURIComponent(q+(s?" site:"+s:" tutorial"))+'" target="_blank" rel="noopener">'+IR+'Read</a><a href="https://www.youtube.com/results?search_query='+encodeURIComponent(q+" tutorial")+'" target="_blank" rel="noopener">'+IW+'Watch</a></span>'}
+var O="https://www.theodinproject.com/paths/full-stack-javascript/courses/";
+var R=[
+["The Odin Project: Foundations (HTML and CSS)","https://www.theodinproject.com/paths/foundations/courses/foundations","MDN Learn|https://developer.mozilla.org/en-US/docs/Learn_web_development,freeCodeCamp|https://www.freecodecamp.org","Wizard Zines|https://wizardzines.com,MDN HTTP|https://developer.mozilla.org/en-US/docs/Web/HTTP"],
+["The Odin Project: Foundations (Git, Flexbox, Grid), then Advanced HTML and CSS",O+"advanced-html-and-css","Flexbox Froggy|https://flexboxfroggy.com,CSS Grid Garden|https://cssgridgarden.com,GitHub Skills|https://skills.github.com","MDN HTTP|https://developer.mozilla.org/en-US/docs/Web/HTTP,Chrome DevTools|https://developer.chrome.com/docs/devtools"],
+["The Odin Project: Foundations (JavaScript basics), then the JavaScript course",O+"javascript","javascript.info|https://javascript.info,MDN JavaScript|https://developer.mozilla.org/en-US/docs/Web/JavaScript,Exercism|https://exercism.org","MDN Cookies|https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies,MDN CORS|https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"],
+["The Odin Project: JavaScript course (ES6, async, APIs)",O+"javascript","javascript.info async|https://javascript.info/async,MDN Fetch API|https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API","MDN HTTP|https://developer.mozilla.org/en-US/docs/Web/HTTP,OWASP Top 10|https://owasp.org/www-project-top-ten"],
+["The Odin Project: React course",O+"react","react.dev Learn|https://react.dev/learn,TypeScript Docs|https://www.typescriptlang.org/docs,Tailwind Docs|https://tailwindcss.com/docs","web.dev Performance|https://web.dev/learn/performance,MDN HTTP Caching|https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching"],
+["The Odin Project: finish the React course and build your projects",O+"react","Supabase Docs|https://supabase.com/docs,Netlify Docs|https://docs.netlify.com","Professor Messer|https://www.professormesser.com,MDN HTTP|https://developer.mozilla.org/en-US/docs/Web/HTTP"],
+["The Odin Project: NodeJS course",O+"nodejs","Node.js Learn|https://nodejs.org/en/learn,Express|https://expressjs.com","MDN HTTP|https://developer.mozilla.org/en-US/docs/Web/HTTP,Wizard Zines|https://wizardzines.com"],
+["The Odin Project: NodeJS course (databases and authentication)",O+"nodejs","SQLBolt|https://sqlbolt.com,PostgreSQL Tutorial|https://www.postgresqltutorial.com,Prisma Docs|https://www.prisma.io/docs","OWASP Top 10|https://owasp.org/www-project-top-ten,Wizard Zines|https://wizardzines.com"],
+["The Odin Project: JavaScript course (testing section)",O+"javascript","Vitest|https://vitest.dev,Testing Library|https://testing-library.com/docs/react-testing-library/intro,Playwright|https://playwright.dev,web.dev Accessibility|https://web.dev/learn/accessibility","High Performance Browser Networking|https://hpbn.co,Chrome DevTools|https://developer.chrome.com/docs/devtools"],
+["The Odin Project: JavaScript course (recursion and algorithms)",O+"javascript","NeetCode|https://neetcode.io,LeetCode|https://leetcode.com,Codewars|https://www.codewars.com","High Performance Browser Networking|https://hpbn.co,MDN WebSockets|https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"],
+["Docker Get Started (official docs, Odin doesn’t cover this)","https://docs.docker.com/get-started","GitHub Actions|https://docs.github.com/actions,Nginx Docs|https://nginx.org/en/docs","Professor Messer|https://www.professormesser.com,High Performance Browser Networking|https://hpbn.co"],
+["The Odin Project: your own projects and the career sections","https://www.theodinproject.com/paths","roadmap.sh|https://roadmap.sh,CS50|https://cs50.harvard.edu","MDN Web Security|https://developer.mozilla.org/en-US/docs/Web/Security,roadmap.sh System Design|https://roadmap.sh/system-design"]
+];
+function lk(s){return s.split(",").map(function(x){var p=x.split("|");return '<a href="'+p[1]+'" target="_blank" rel="noopener">'+p[0]+'</a>'}).join("")}
+var PR=["Frontend Mentor|https://www.frontendmentor.io","roadmap.sh Projects|https://roadmap.sh/projects"];
+function resBox(i,z){var r=R[i];var c=function(t,l){return '<div class="rc"><b class="rl">'+t+'</b>'+l+'</div>'};return '<div class="rr"><span></span><span></span>'+c('Web dev resources','<a class="main" href="'+r[1]+'" target="_blank" rel="noopener">'+r[0]+'</a>'+lk(r[2]))+(z?c('Chinese resources',lk(ZR)):'')+c('Networking resources',lk(r[3]))+c('Project resources',(r[1].indexOf('theodinproject')>-1?'<a href="'+r[1]+'" target="_blank" rel="noopener">Odin course projects</a>':'')+lk(PR[i<6?0:1]))+'</div>'}
+var h="",nav="";
+M.forEach(function(m,i){var cc=i%6+1;
+nav+='<a href="#m'+(i+1)+'">Month '+(i+1)+'</a>';
+h+='<section class="month" id="m'+(i+1)+'">'+(i==0?'<h2 class="part">Part 1 · Job-ready (weeks 1 to 24)</h2>':i==6?'<h2 class="part">Part 2 · Full-stack depth (weeks 25 to 48)</h2>':'')+'<div class="mh" style="background:var(--m'+cc+')"><h2>'+m[0]+'</h2><p>'+m[1]+'</p><div class="mp"><i></i></div><span class="mc"></span></div>';
+for(var k=0;k<4;k++){
+var n=i*4+k+1,f=W[n-1].split("~");
+h+='<details class="week'+(n<25?' z':'')+'" data-w="'+n+'"><summary class="wh"><h3>Week '+n+': '+f[0]+'</h3>'+'<span class="pri p-'+P[n-1]+'">'+PL[P[n-1]]+'</span>'+(n%4==0?'<span class="ms">Milestone</span>':'')+'<span class="cnt"></span></summary>'+wfocus(n)+(n<25?HDZ:HD);
+var nn=N[n-1].split("~");for(var d=0;d<6;d++){var wl=f[2+d*2],nl=nn[d];h+=row("w"+n+"d"+d,D[d],wl+ll(f[0]+" "+wl,SC[WSITE[n-1]],wl),nl+ll(nl+" web networking","",nl),f[3+d*2],n<25?ZD[d]+ll("learn Mandarin "+ZT[n-1]+" "+ZD[d],"",ZD[d]):"")}
+h+=row("w"+n+"d6","Sun","Review the week, redo what felt hard","Quiz yourself on this week’s networking","Rest",n<25?ZD[6]:"")+'</details>';
+}
+h+='</section>';
+});
+document.getElementById("nav").innerHTML=nav;
+var MD="https://developer.mozilla.org/en-US/docs/";
+var RS=[
+["Web development","The Odin Project: Foundations|https://www.theodinproject.com/paths/foundations/courses/foundations|Months 1 to 3~MDN Learn web development|"+MD+"Learn_web_development|Reference, every month~Flexbox Froggy|https://flexboxfroggy.com|Week 5~CSS Grid Garden|https://cssgridgarden.com|Week 6~GitHub Skills|https://skills.github.com|Week 7~javascript.info|https://javascript.info|Months 3 to 4~The Odin Project: JavaScript course|"+O+"javascript|Months 3 to 4, and 9 to 10~The Odin Project: React course|"+O+"react|Months 5 to 6~react.dev Learn|https://react.dev/learn|Month 5~TypeScript Docs|https://www.typescriptlang.org/docs|Month 5~Tailwind Docs|https://tailwindcss.com/docs|Month 5~Supabase Docs|https://supabase.com/docs|Month 6~The Odin Project: NodeJS course|"+O+"nodejs|Months 7 to 8~SQLBolt|https://sqlbolt.com|Month 8~PostgreSQL Tutorial|https://www.postgresqltutorial.com|Month 8~Vitest|https://vitest.dev|Month 9~Playwright|https://playwright.dev|Month 9~NeetCode|https://neetcode.io|Month 10 (optional)~Docker Get Started|https://docs.docker.com/get-started|Month 11~GitHub Actions|https://docs.github.com/actions|Month 11~roadmap.sh|https://roadmap.sh|Month 12"],
+["Networking","Wizard Zines|https://wizardzines.com|Month 1~MDN HTTP|"+MD+"Web/HTTP|Months 1 to 4~Chrome DevTools|https://developer.chrome.com/docs/devtools|Month 2~MDN Cookies|"+MD+"Web/HTTP/Cookies|Month 3~MDN CORS|"+MD+"Web/HTTP/CORS|Month 3~OWASP Top 10|https://owasp.org/www-project-top-ten|Months 4 and 8~web.dev Performance|https://web.dev/learn/performance|Month 5~MDN HTTP Caching|"+MD+"Web/HTTP/Caching|Month 5~Professor Messer|https://www.professormesser.com|Optional depth, months 6 and 11~High Performance Browser Networking|https://hpbn.co|Months 9 to 11~MDN WebSockets|"+MD+"Web/API/WebSockets_API|Month 10~MDN Web Security|"+MD+"Web/Security|Month 12~roadmap.sh System Design|https://roadmap.sh/system-design|Month 12"],
+["Chinese","HelloChinese|https://www.hellochinese.cc|Start in week 1, use daily~Pleco dictionary|https://www.pleco.com|From week 1~Anki flashcards|https://apps.ankiweb.net|From week 3~Hanzi Writer|https://hanziwriter.org|From week 4~Yoyo Chinese|https://yoyochinese.com|Pronunciation weeks 1 to 2, grammar weeks 9 to 12~Chinese Grammar Wiki|https://resources.allsetlearning.com/chinese/grammar|Weeks 9 to 12 and 21 to 22"]
+];
+var subs='<details class="subsd"><summary class="sumbtn">Resources by subject, in learning order</summary><div class="subgrid">';
+RS.forEach(function(s){subs+='<div class="subj"><h3>'+s[0]+'</h3><ol>'+s[1].split("~").map(function(x){var p=x.split("|");return '<li><a href="'+p[1]+'" target="_blank" rel="noopener">'+p[0]+'</a><span class="when">'+p[2]+'</span></li>'}).join("")+'</ol></div>'});
+document.getElementById("subs").innerHTML=subs+'</div></details>';
+var main=document.getElementById("main");main.innerHTML=h;
+function nextId(){for(var n=1;n<=W.length;n++)for(var d=0;d<7;d++){if(!done.has("w"+n+"d"+d))return[n,d]}return null}
+function renderHero(){
+var el=document.getElementById("hero");if(!el)return;
+var x=nextId();
+if(!x){el.innerHTML='<div class="hero"><div class="hh"><div><h2>All 336 days done</h2><p>You finished the whole plan. Well done.</p></div></div></div>';return}
+var n=x[0],d=x[1],f=W[n-1].split("~"),nn=N[n-1].split("~"),z=n<25,wl,nl,pl,zl;
+if(d<6){wl=f[2+d*2];nl=nn[d];pl=f[3+d*2];zl=z?ZD[d]+": "+ZT[n-1]:""}
+else{wl="Review the week, redo what felt hard";nl="Quiz yourself on this week\u2019s networking";pl="Rest";zl=z?ZD[6]+": "+ZT[n-1]:""}
+var DN=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+function tile(c,k,t,l){return '<div class="tile t-'+c+'"><div class="tk">'+k+'</div><div class="tt">'+t+'</div>'+l+'</div>'}
+el.innerHTML='<div class="hero"><div class="hh"><div><h2>Up next: '+DN[d]+', week '+n+'</h2><p>'+f[0]+'</p></div><button class="btn" id="mk" type="button">Mark day done</button></div><div class="tiles">'+
+tile("web","Web dev, 1 PM",wl,d<6?ll(f[0]+" "+wl,SC[WSITE[n-1]],wl):"")+
+(z?tile("zh","Chinese, 6 PM",zl,d<6?ll("learn Mandarin "+ZT[n-1]+" "+ZD[d],"",ZD[d]):""):"")+
+tile("net","Networking, 8 PM",nl,d<6?ll(nl+" web networking","",nl):"")+
+tile("prj","Project, 8:40 PM",pl,"")+'</div></div>';
+document.getElementById("mk").onclick=function(){var b=document.querySelector('input[data-id="w'+n+'d'+d+'"]');if(b){b.checked=true;b.dispatchEvent(new Event("change",{bubbles:true}))}};
+}
+function upd(){
+document.querySelectorAll(".week").forEach(function(w){w.querySelector(".cnt").textContent=w.querySelectorAll("input:checked").length+" / 7 done"});
+document.querySelectorAll(".month").forEach(function(m){var k=m.querySelectorAll("input:checked").length;m.querySelector(".mp i").style.width=(k/28*100)+"%";m.querySelector(".mc").textContent=k+" of 28 days done"});
+var c=done.size;
+document.getElementById("ptxt").textContent=c+" of 336 days done";
+document.getElementById("ppct").textContent=Math.round(c/336*100)+"%";
+document.getElementById("rfill").style.strokeDashoffset=264*(1-c/336);renderHero();renderDash();
+}
+var ref=null,writing=false,dirty=false;
+function cache(){try{localStorage.setItem("wd-plan",JSON.stringify(Array.from(done)))}catch(x){}}
+function paint(){document.querySelectorAll("input[data-id]").forEach(function(i){i.checked=done.has(i.dataset.id)});upd()}
+function push(){
+if(!ref)return;
+if(writing){dirty=true;return}
+writing=true;dirty=false;
+ref.set({done:Array.from(done),updatedAt:Date.now()}).catch(function(){}).then(function(){writing=false;if(dirty)push()});
+}
+main.addEventListener("change",function(e){
+var t=e.target;if(!t.dataset.id)return;
+if(t.checked)done.add(t.dataset.id);else done.delete(t.dataset.id);
+cache();if(t.checked){lms.days[tk()]=1;lsave()}upd();push();
+});
+upd();
+var ws=document.querySelectorAll(".week");
+for(var q=0;q<ws.length;q++){if(ws[q].querySelectorAll("input:checked").length<7){ws[q].open=true;break}}
+initNotes();renderNoteList();markNow();setInterval(markNow,60000);
+var sy=document.getElementById("sync");
+sy.textContent="Saved on this device only";
+(async function(){
+try{
+if(!window.claude)return;
+var user=await claude.use("user"),db=await claude.use("db");
+if(!user||!db)return;
+var id=await user.id();
+ref=db.doc("data/users/"+id+"/progress");
+lref=db.doc("data/users/"+id+"/lms");
+var ls=await lref.get();
+if(ls.exists){lms=Object.assign({status:{},days:{},notes:[]},ls.data());try{localStorage.setItem("wd-lms",JSON.stringify(lms))}catch(x){}renderDash();renderNoteList()}else{lsave()}
+lref.onSnapshot(function(s){if(s.exists){lms=Object.assign({status:{},days:{},notes:[]},s.data());renderDash();renderNoteList()}},function(){});
+var snap=await ref.get();
+if(snap.exists){(snap.data().done||[]).forEach(function(x){done.add(x)})}
+cache();paint();push();
+ref.onSnapshot(function(s){if(s.exists){done=new Set(s.data().done||[]);cache();paint()}},function(){});
+sy.textContent="Synced to your account: the same ticks on every device you sign in to";
+}catch(e){ref=null}
+})();
+</script>
+</body>
+</html>
